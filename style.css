@@ -1,0 +1,59 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    height: 100vh;
+}
+
+
+#label{
+    font-size: 30px;
+    text-decoration: underline;
+    padding-right: 10px;
+}
+
+
+#btn{
+    height: 50px;
+    border-radius: 50%;
+    
+}
+
+#rickDiv{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    
+}
+
+
+#container{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#imgDiv{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 50px;
+    grid-column-gap: 100px;
+    grid-row-gap: 50px;
+
+}
+
+.avatrimg{
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 5px 7px 15px 0;
+}
+
+.imgid{
+    width: 200px;
+}
+
+#imgRic{
+
+}
