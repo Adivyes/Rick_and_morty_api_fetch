@@ -35,49 +35,49 @@
 let valueSerch = document.getElementById('rickInput')
 let findName = `https://rickandmortyapi.com/api/character/?name=`
 let apiUrl = 'https://rickandmortyapi.com/api/character/'
-let avatarArray;  
+let avatarArray;
 getRickData()
 
-function getRickApi(api){
-    
-return fetch(api).then(res => res.json()).then(res => res.results)
+function getRickApi(api) {
+
+    return fetch(api).then(res => res.json()).then(res => res.results)
 }
 
-async function getRickData(){
-    try{
+async function getRickData() {
+    try {
         imgDiv.innerHTML = '<img src="img/gif-animations-replace-loading-screen-14.gif">'
         avatarArray = await getRickApi(apiUrl);
-           console.log(avatarArray)
-           picObj()
+        console.log(avatarArray)
+        picObj()
     }
-    catch(error){
+    catch (error) {
         console.log(error)
     }
-    finally{
+    finally {
 
     }
 }
 
-async function getAvatarNameApi (){
-    
-        try{
-   
-            avatarArray = await getRickApi(`${findName + valueSerch.value}`);
-               picObj()
-        }
-        catch(error){
-            console.log(error)
-        }
-        finally{
-    
-        }
+async function getAvatarNameApi() {
+
+    try {
+
+        avatarArray = await getRickApi(`${findName + valueSerch.value}`);
+        picObj()
+    }
+    catch (error) {
+        console.log(error)
+    }
+    finally {
+
+    }
 }
 
 
 function picObj() {
     imgDiv.innerHTML = ''
-   for (const iterator of avatarArray) {
-    imgDiv.innerHTML += `<div class='imgid' id="img${iterator.id}">
+    for (const iterator of avatarArray) {
+        imgDiv.innerHTML += `<div class='imgid' id="img${iterator.id}">
     <img class='avatrimg' src=${iterator.image}></img>
     
     <h2>${iterator.name}</h2>
@@ -85,12 +85,12 @@ function picObj() {
     <h3>Species: ${iterator.species}</h3>
     <h3>Status: ${iterator.status}</h3>
     </div>`
-    
-   }
+
+    }
 }
 
 
-function rickAndMorty(){
-    getAvatarNameApi ()
-     
+function rickAndMorty() {
+    getAvatarNameApi()
+
 }
