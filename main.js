@@ -32,22 +32,6 @@
 
 // ===================================================
 
-
-
-// 1.	מצאו API שמעניין 
-// אתכם/ן
-// 2.	צרו פונקציה שקוראת לו ומדפיסה את התוצאה ללוג
-// 3.	צרו פונקציה אסינכרונית שקוראת לפונקציית ה API
-// 4.	צרו
-//  מנגנון tr/catch/finally לפונקציה האסיכרונית
-// 5.	הוסיפו loading שמופיע בזמן הטעינה ונעלם בעת קבלת תשובה 
-// מהשרת
-// 6.	הציגו ב DOM את הנתונים בצורה יפה
-// 7.	הוסיפו שורת קלט וכפתור
-// 8.	הציגו על המסך את הנתונים מה API על בסיס חיפוש של הקלט בעת לחיצה על הכפתור
-
-
-// https://rickandmortyapi.com/api/character/
 let valueSerch = document.getElementById('rickInput')
 let findName = `https://rickandmortyapi.com/api/character/?name=`
 let apiUrl = 'https://rickandmortyapi.com/api/character/'
@@ -87,7 +71,7 @@ async function getAvatarNameApi (){
         finally{
     
         }
-    }
+}
 
 
 function picObj() {
