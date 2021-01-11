@@ -7,10 +7,23 @@ body {
 #headerdiv {
     margin-top: 10%;
 }
+#mortyMony{
+    height: 200px;
+    margin-left: 20px;
+}
+
+#rickShak{
+    margin-right: 100px;
+}
+#mortycrisatl{
+    height: 350px;
+    margin-left: 20px;
+    margin-right: 80px;
+}
 
 #bigrickgif {
     height: 350px;
-    margin-left: 200px;
+    margin-left: 20px;
 }
 
 #headerdiv, h1 h2 {
@@ -26,9 +39,44 @@ h1 {
     height: 100vh;
 }
 
-/* #inputimgdiv{
-height: 100vh;
-} */
+#gifdiv{
+    display: none;
+}
+
+.banner-btn a{
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: white;
+    border: 2px solid white;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    
+}
+
+.banner-btn a span{
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.banner-btn a:hover span{
+    width: 100%;
+}
+
+.banner-btn a:hover{
+    color: black;
+}
 
 #label {
     font-size: 30px;
@@ -39,13 +87,20 @@ height: 100vh;
 #btn {
     height: 50px;
     border-radius: 50%;
+    outline-style: none;
 }
-
+.gifclass{
+    height: 200px;
+}
+#spanGif{
+    margin-left: 45%;
+    margin-bottom: 2%;
+}
 #rickDiv {
     display: flex;
     align-items: stretch;
     justify-content: center;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     margin-top: 5%;
 }
 

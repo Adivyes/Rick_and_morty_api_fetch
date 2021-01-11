@@ -31,12 +31,19 @@
 
 
 // ===================================================
-
 let valueSerch = document.getElementById('rickInput')
 let findName = `https://rickandmortyapi.com/api/character/?name=`
 let apiUrl = 'https://rickandmortyapi.com/api/character/'
 let avatarArray;
+setTimeout(showDontshow,6000)
 getRickData()
+                   
+                                  
+ function showDontshow(){
+    haderAnimetionDiv.style.display = "block"; 
+}           
+ 
+let haderAnimetionDiv = document.getElementById('gifdiv')
 
 function getRickApi(api) {
 
@@ -45,7 +52,6 @@ function getRickApi(api) {
 
 async function getRickData() {
     try {
-        imgDiv.innerHTML = '<img src="img/gif-animations-replace-loading-screen-14.gif">'
         avatarArray = await getRickApi(apiUrl);
         console.log(avatarArray)
         picObj()
@@ -61,6 +67,7 @@ async function getRickData() {
 async function getAvatarNameApi() {
 
     try {
+        imgDiv.innerHTML = '<img class="gifclass" src="img/source.gif">'
 
         avatarArray = await getRickApi(`${findName + valueSerch.value}`);
         picObj()
@@ -69,16 +76,15 @@ async function getAvatarNameApi() {
         console.log(error)
     }
     finally {
-
+        
     }
 }
-
 
 function picObj() {
     imgDiv.innerHTML = ''
     for (const iterator of avatarArray) {
         imgDiv.innerHTML += `<div class='imgid' id="img${iterator.id}">
-    <img class='avatrimg' src=${iterator.image}></img>
+    <img class='avatrimg' src=${iterator.image}>
     
     <h2>${iterator.name}</h2>
     <h3>Gender: ${iterator.gender}</h3>
@@ -89,8 +95,10 @@ function picObj() {
     }
 }
 
-
 function rickAndMorty() {
     getAvatarNameApi()
 
 }
+
+
+
