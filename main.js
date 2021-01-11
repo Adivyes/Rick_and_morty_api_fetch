@@ -38,7 +38,7 @@ let avatarArray;
 setTimeout(showDontshow,6000)
 getRickData()
                    
-                                  
+                                 
  function showDontshow(){
     haderAnimetionDiv.style.display = "block"; 
 }           
